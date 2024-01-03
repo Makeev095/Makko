@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SlideCollectionViewCell" customModule="Makko" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="222" height="406"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="222" height="406"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3KY-NE-RmP">
+                        <rect key="frame" x="0.0" y="0.0" width="222" height="406"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slide1" translatesAutoresizingMaskIntoConstraints="NO" id="wzD-Xi-Zx5">
+                                <rect key="frame" x="0.0" y="0.0" width="222" height="406"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Makko" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryW-Xc-Xjm">
+                                <rect key="frame" x="8" y="45" width="214" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какой-то текст для слайла 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qz5-uL-xT4">
+                                <rect key="frame" x="10" y="150" width="182" height="40.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JF0-JM-33X">
+                                <rect key="frame" x="74.666666666666671" y="319" width="73.000000000000014" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Войти">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="authButtonClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="CcG-cx-Y4E"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jl9-1B-meK">
+                                <rect key="frame" x="30" y="259" width="162" height="45"/>
+                                <color key="backgroundColor" red="0.16078431372549018" green="0.50196078431372548" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="xu3-xR-q5T"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Регистрация">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="regButtonClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="bah-7e-gFX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="jl9-1B-meK" secondAttribute="trailing" constant="30" id="ACA-d5-k8H"/>
+                            <constraint firstItem="ryW-Xc-Xjm" firstAttribute="leading" secondItem="3KY-NE-RmP" secondAttribute="leading" constant="8" id="B1j-wI-aQD"/>
+                            <constraint firstItem="ryW-Xc-Xjm" firstAttribute="top" secondItem="3KY-NE-RmP" secondAttribute="top" constant="45" id="Dai-av-TEv"/>
+                            <constraint firstAttribute="trailing" secondItem="Qz5-uL-xT4" secondAttribute="trailing" constant="30" id="Fwo-F3-Ltb"/>
+                            <constraint firstItem="JF0-JM-33X" firstAttribute="centerX" secondItem="3KY-NE-RmP" secondAttribute="centerX" id="IVC-q0-EBW"/>
+                            <constraint firstAttribute="trailing" secondItem="wzD-Xi-Zx5" secondAttribute="trailing" id="OQI-X1-Yeh"/>
+                            <constraint firstItem="wzD-Xi-Zx5" firstAttribute="top" secondItem="3KY-NE-RmP" secondAttribute="top" id="SuC-bD-XEL"/>
+                            <constraint firstItem="Qz5-uL-xT4" firstAttribute="top" secondItem="ryW-Xc-Xjm" secondAttribute="bottom" constant="45" id="Yah-pi-e1q"/>
+                            <constraint firstItem="JF0-JM-33X" firstAttribute="top" secondItem="jl9-1B-meK" secondAttribute="bottom" constant="15" id="ZFx-Mh-krX"/>
+                            <constraint firstAttribute="trailing" secondItem="ryW-Xc-Xjm" secondAttribute="trailing" id="aFI-JS-2fk"/>
+                            <constraint firstItem="Qz5-uL-xT4" firstAttribute="leading" secondItem="3KY-NE-RmP" secondAttribute="leading" constant="10" id="dHt-zb-y25"/>
+                            <constraint firstAttribute="bottom" secondItem="wzD-Xi-Zx5" secondAttribute="bottom" id="dfN-qR-sdk"/>
+                            <constraint firstItem="wzD-Xi-Zx5" firstAttribute="leading" secondItem="3KY-NE-RmP" secondAttribute="leading" id="vmH-pQ-pqv"/>
+                            <constraint firstAttribute="bottom" secondItem="JF0-JM-33X" secondAttribute="bottom" constant="52" id="zBM-eP-Z6a"/>
+                            <constraint firstItem="jl9-1B-meK" firstAttribute="leading" secondItem="3KY-NE-RmP" secondAttribute="leading" constant="30" id="zUp-8S-QU9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="3KY-NE-RmP" secondAttribute="bottom" id="PFm-GV-u6Y"/>
+                <constraint firstItem="3KY-NE-RmP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="QV4-U2-gQq"/>
+                <constraint firstAttribute="trailing" secondItem="3KY-NE-RmP" secondAttribute="trailing" id="dui-rD-sQk"/>
+                <constraint firstItem="3KY-NE-RmP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="idf-ey-LpQ"/>
+            </constraints>
+            <size key="customSize" width="222" height="406"/>
+            <connections>
+                <outlet property="authButton" destination="JF0-JM-33X" id="fdD-kY-OVH"/>
+                <outlet property="descriptionText" destination="Qz5-uL-xT4" id="42m-RQ-W5L"/>
+                <outlet property="regButton" destination="JF0-JM-33X" id="1u9-GM-mXo"/>
+                <outlet property="slideImage" destination="wzD-Xi-Zx5" id="9Hl-9z-ZHG"/>
+            </connections>
+            <point key="canvasLocation" x="114.50381679389312" y="33.802816901408455"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="slide1" width="564" height="1002"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

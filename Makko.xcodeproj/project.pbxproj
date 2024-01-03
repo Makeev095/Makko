@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		3611BE8C2B459F6100FFF2BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611BE8B2B459F6100FFF2BC /* AppDelegate.swift */; };
 		3611BE8E2B459F6100FFF2BC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611BE8D2B459F6100FFF2BC /* SceneDelegate.swift */; };
-		3611BE902B459F6100FFF2BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611BE8F2B459F6100FFF2BC /* ViewController.swift */; };
 		3611BE932B459F6100FFF2BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3611BE912B459F6100FFF2BC /* Main.storyboard */; };
 		3611BE952B459F6200FFF2BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3611BE942B459F6200FFF2BC /* Assets.xcassets */; };
 		3611BE982B459F6200FFF2BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3611BE962B459F6200FFF2BC /* LaunchScreen.storyboard */; };
 		3611BEA02B45A0DC00FFF2BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3611BE9F2B45A0DC00FFF2BC /* GoogleService-Info.plist */; };
+		3611BEA72B45A46F00FFF2BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611BEA62B45A46F00FFF2BC /* LoginViewController.swift */; };
+		3611BEAB2B45A79200FFF2BC /* SlideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611BEA92B45A79200FFF2BC /* SlideCollectionViewCell.swift */; };
+		3611BEAC2B45A79200FFF2BC /* SlideCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3611BEAA2B45A79200FFF2BC /* SlideCollectionViewCell.xib */; };
+		3611BEAE2B45B37A00FFF2BC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611BEAD2B45B37A00FFF2BC /* Model.swift */; };
 		C61C1AF92D3DFF9BBBD6C07F /* Pods_Makko.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143AF755982E9EDFBD72293C /* Pods_Makko.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,12 +25,15 @@
 		3611BE882B459F6100FFF2BC /* Makko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Makko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3611BE8B2B459F6100FFF2BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3611BE8D2B459F6100FFF2BC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3611BE8F2B459F6100FFF2BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3611BE922B459F6100FFF2BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3611BE942B459F6200FFF2BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3611BE972B459F6200FFF2BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3611BE992B459F6200FFF2BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3611BE9F2B45A0DC00FFF2BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		3611BEA62B45A46F00FFF2BC /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3611BEA92B45A79200FFF2BC /* SlideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCollectionViewCell.swift; sourceTree = "<group>"; };
+		3611BEAA2B45A79200FFF2BC /* SlideCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideCollectionViewCell.xib; sourceTree = "<group>"; };
+		3611BEAD2B45B37A00FFF2BC /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A157CCCBB93D826348DBC9DF /* Pods-Makko.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makko.debug.xcconfig"; path = "Target Support Files/Pods-Makko/Pods-Makko.debug.xcconfig"; sourceTree = "<group>"; };
 		EFE0F0EAE92F9D1A6FAB3F44 /* Pods-Makko.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makko.release.xcconfig"; path = "Target Support Files/Pods-Makko/Pods-Makko.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,9 +79,11 @@
 		3611BE8A2B459F6100FFF2BC /* Makko */ = {
 			isa = PBXGroup;
 			children = (
+				3611BEA32B45A39200FFF2BC /* Controller */,
+				3611BEA22B45A38800FFF2BC /* View */,
+				3611BEA12B45A38000FFF2BC /* Model */,
 				3611BE8B2B459F6100FFF2BC /* AppDelegate.swift */,
 				3611BE8D2B459F6100FFF2BC /* SceneDelegate.swift */,
-				3611BE8F2B459F6100FFF2BC /* ViewController.swift */,
 				3611BE912B459F6100FFF2BC /* Main.storyboard */,
 				3611BE942B459F6200FFF2BC /* Assets.xcassets */,
 				3611BE962B459F6200FFF2BC /* LaunchScreen.storyboard */,
@@ -85,13 +93,61 @@
 			path = Makko;
 			sourceTree = "<group>";
 		};
+		3611BEA12B45A38000FFF2BC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3611BEAD2B45B37A00FFF2BC /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3611BEA22B45A38800FFF2BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3611BEA82B45A74A00FFF2BC /* Slide */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3611BEA32B45A39200FFF2BC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3611BEA52B45A44700FFF2BC /* App */,
+				3611BEA42B45A43E00FFF2BC /* Login */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3611BEA42B45A43E00FFF2BC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				3611BEA62B45A46F00FFF2BC /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		3611BEA52B45A44700FFF2BC /* App */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3611BEA82B45A74A00FFF2BC /* Slide */ = {
+			isa = PBXGroup;
+			children = (
+				3611BEA92B45A79200FFF2BC /* SlideCollectionViewCell.swift */,
+				3611BEAA2B45A79200FFF2BC /* SlideCollectionViewCell.xib */,
+			);
+			path = Slide;
+			sourceTree = "<group>";
+		};
 		AD337F3FEEFDED4049A8F427 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				A157CCCBB93D826348DBC9DF /* Pods-Makko.debug.xcconfig */,
 				EFE0F0EAE92F9D1A6FAB3F44 /* Pods-Makko.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -156,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3611BE982B459F6200FFF2BC /* LaunchScreen.storyboard in Resources */,
+				3611BEAC2B45A79200FFF2BC /* SlideCollectionViewCell.xib in Resources */,
 				3611BEA02B45A0DC00FFF2BC /* GoogleService-Info.plist in Resources */,
 				3611BE952B459F6200FFF2BC /* Assets.xcassets in Resources */,
 				3611BE932B459F6100FFF2BC /* Main.storyboard in Resources */,
@@ -211,7 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3611BE902B459F6100FFF2BC /* ViewController.swift in Sources */,
+				3611BEAE2B45B37A00FFF2BC /* Model.swift in Sources */,
+				3611BEAB2B45A79200FFF2BC /* SlideCollectionViewCell.swift in Sources */,
+				3611BEA72B45A46F00FFF2BC /* LoginViewController.swift in Sources */,
 				3611BE8C2B459F6100FFF2BC /* AppDelegate.swift in Sources */,
 				3611BE8E2B459F6100FFF2BC /* SceneDelegate.swift in Sources */,
 			);
