@@ -1,0 +1,6 @@
+framework module Pods_Makko {
+  umbrella header "Pods-Makko-umbrella.h"
+
+  export *
+  module * { export * }
+}
