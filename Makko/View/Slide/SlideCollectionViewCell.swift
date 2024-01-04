@@ -12,7 +12,9 @@ class SlideCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var descriptionText: UILabel!
     @IBOutlet weak var slideImage: UIImageView!
     
+    
     @IBOutlet weak var regButton: UIButton!
+    
     @IBOutlet weak var authButton: UIButton!
     
     static var reuseId = "SlideCollectionViewCell"
@@ -27,15 +29,16 @@ class SlideCollectionViewCell: UICollectionViewCell {
         
         if slide.id == 3 {
             regButton.isHidden = false
+            
             authButton.isHidden = false
         }
     }
     
+ 
     @IBAction func regButtonClick(_ sender: Any) {
-        
     }
     
+
     @IBAction func authButtonClick(_ sender: Any) {
-        
     }
 }

@@ -11,42 +11,42 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SlideCollectionViewCell" customModule="Makko" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="222" height="406"/>
+            <rect key="frame" x="0.0" y="0.0" width="242" height="427"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="222" height="406"/>
+                <rect key="frame" x="0.0" y="0.0" width="242" height="427"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3KY-NE-RmP">
-                        <rect key="frame" x="0.0" y="0.0" width="222" height="406"/>
+                        <rect key="frame" x="0.0" y="0.0" width="242" height="427"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slide1" translatesAutoresizingMaskIntoConstraints="NO" id="wzD-Xi-Zx5">
-                                <rect key="frame" x="0.0" y="0.0" width="222" height="406"/>
+                                <rect key="frame" x="0.0" y="0.0" width="242" height="427"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Makko" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ryW-Xc-Xjm">
-                                <rect key="frame" x="8" y="45" width="214" height="60"/>
+                                <rect key="frame" x="8" y="45" width="234" height="60"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какой-то текст для слайла 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qz5-uL-xT4">
-                                <rect key="frame" x="10" y="150" width="182" height="40.666666666666657"/>
+                                <rect key="frame" x="10" y="150" width="202" height="40.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JF0-JM-33X">
-                                <rect key="frame" x="74.666666666666671" y="319" width="73.000000000000014" height="35"/>
+                                <rect key="frame" x="84.666666666666671" y="340" width="73.000000000000014" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Войти">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="authButtonClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="CcG-cx-Y4E"/>
+                                    <action selector="authButtonClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="epj-qE-fAE"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jl9-1B-meK">
-                                <rect key="frame" x="30" y="259" width="162" height="45"/>
+                                <rect key="frame" x="30" y="280" width="182" height="45"/>
                                 <color key="backgroundColor" red="0.16078431372549018" green="0.50196078431372548" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="xu3-xR-q5T"/>
@@ -62,7 +62,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="regButtonClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="bah-7e-gFX"/>
+                                    <action selector="regButtonClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Fdz-K3-OAy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -81,6 +81,7 @@
                             <constraint firstItem="Qz5-uL-xT4" firstAttribute="leading" secondItem="3KY-NE-RmP" secondAttribute="leading" constant="10" id="dHt-zb-y25"/>
                             <constraint firstAttribute="bottom" secondItem="wzD-Xi-Zx5" secondAttribute="bottom" id="dfN-qR-sdk"/>
                             <constraint firstItem="wzD-Xi-Zx5" firstAttribute="leading" secondItem="3KY-NE-RmP" secondAttribute="leading" id="vmH-pQ-pqv"/>
+                            <constraint firstItem="JF0-JM-33X" firstAttribute="top" secondItem="jl9-1B-meK" secondAttribute="bottom" constant="15" id="z8C-ls-42i"/>
                             <constraint firstAttribute="bottom" secondItem="JF0-JM-33X" secondAttribute="bottom" constant="52" id="zBM-eP-Z6a"/>
                             <constraint firstItem="jl9-1B-meK" firstAttribute="leading" secondItem="3KY-NE-RmP" secondAttribute="leading" constant="30" id="zUp-8S-QU9"/>
                         </constraints>
@@ -94,14 +95,14 @@
                 <constraint firstAttribute="trailing" secondItem="3KY-NE-RmP" secondAttribute="trailing" id="dui-rD-sQk"/>
                 <constraint firstItem="3KY-NE-RmP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="idf-ey-LpQ"/>
             </constraints>
-            <size key="customSize" width="222" height="406"/>
+            <size key="customSize" width="242" height="427"/>
             <connections>
-                <outlet property="authButton" destination="JF0-JM-33X" id="fdD-kY-OVH"/>
+                <outlet property="authButton" destination="JF0-JM-33X" id="oyY-pw-BZC"/>
                 <outlet property="descriptionText" destination="Qz5-uL-xT4" id="42m-RQ-W5L"/>
-                <outlet property="regButton" destination="JF0-JM-33X" id="1u9-GM-mXo"/>
+                <outlet property="regButton" destination="jl9-1B-meK" id="0Pq-q7-B9e"/>
                 <outlet property="slideImage" destination="wzD-Xi-Zx5" id="9Hl-9z-ZHG"/>
             </connections>
-            <point key="canvasLocation" x="114.50381679389312" y="33.802816901408455"/>
+            <point key="canvasLocation" x="129.7709923664122" y="41.197183098591552"/>
         </collectionViewCell>
     </objects>
     <resources>
