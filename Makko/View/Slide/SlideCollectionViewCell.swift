@@ -12,10 +12,10 @@ class SlideCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var descriptionText: UILabel!
     @IBOutlet weak var slideImage: UIImageView!
     
-    
     @IBOutlet weak var regButton: UIButton!
-    
     @IBOutlet weak var authButton: UIButton!
+    
+    var delegate: LoginViewControllerDelegate!
     
     static var reuseId = "SlideCollectionViewCell"
     override func awakeFromNib() {
@@ -34,11 +34,11 @@ class SlideCollectionViewCell: UICollectionViewCell {
         }
     }
     
- 
     @IBAction func regButtonClick(_ sender: Any) {
+        delegate.openRegistrationVC()
     }
     
-
     @IBAction func authButtonClick(_ sender: Any) {
+        delegate.openAuthorizationVC()
     }
 }

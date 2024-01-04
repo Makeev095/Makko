@@ -42,7 +42,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="authButtonClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="epj-qE-fAE"/>
+                                    <action selector="authButtonClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="yFP-iL-PTf"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jl9-1B-meK">
@@ -62,7 +62,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="regButtonClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="Fdz-K3-OAy"/>
+                                    <action selector="regButtonClick:" destination="gTV-IL-0wX" eventType="touchUpInside" id="NHz-Tm-03w"/>
                                 </connections>
                             </button>
                         </subviews>
