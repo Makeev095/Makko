@@ -17,6 +17,10 @@
 		3611BEAB2B45A79200FFF2BC /* SlideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611BEA92B45A79200FFF2BC /* SlideCollectionViewCell.swift */; };
 		3611BEAC2B45A79200FFF2BC /* SlideCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3611BEAA2B45A79200FFF2BC /* SlideCollectionViewCell.xib */; };
 		3611BEAE2B45B37A00FFF2BC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611BEAD2B45B37A00FFF2BC /* Model.swift */; };
+		3611BEB02B46E68200FFF2BC /* SliderSlides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611BEAF2B46E68200FFF2BC /* SliderSlides.swift */; };
+		3611BEB22B46E81600FFF2BC /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611BEB12B46E81600FFF2BC /* RegistrationViewController.swift */; };
+		3611BEB42B46E84600FFF2BC /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611BEB32B46E84600FFF2BC /* AuthorizationViewController.swift */; };
+		3611BEB62B46E98900FFF2BC /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611BEB52B46E98900FFF2BC /* AppViewController.swift */; };
 		C61C1AF92D3DFF9BBBD6C07F /* Pods_Makko.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143AF755982E9EDFBD72293C /* Pods_Makko.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +38,10 @@
 		3611BEA92B45A79200FFF2BC /* SlideCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideCollectionViewCell.swift; sourceTree = "<group>"; };
 		3611BEAA2B45A79200FFF2BC /* SlideCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SlideCollectionViewCell.xib; sourceTree = "<group>"; };
 		3611BEAD2B45B37A00FFF2BC /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		3611BEAF2B46E68200FFF2BC /* SliderSlides.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderSlides.swift; sourceTree = "<group>"; };
+		3611BEB12B46E81600FFF2BC /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		3611BEB32B46E84600FFF2BC /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		3611BEB52B46E98900FFF2BC /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		A157CCCBB93D826348DBC9DF /* Pods-Makko.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makko.debug.xcconfig"; path = "Target Support Files/Pods-Makko/Pods-Makko.debug.xcconfig"; sourceTree = "<group>"; };
 		EFE0F0EAE92F9D1A6FAB3F44 /* Pods-Makko.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makko.release.xcconfig"; path = "Target Support Files/Pods-Makko/Pods-Makko.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				3611BEAD2B45B37A00FFF2BC /* Model.swift */,
+				3611BEAF2B46E68200FFF2BC /* SliderSlides.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -122,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				3611BEA62B45A46F00FFF2BC /* LoginViewController.swift */,
+				3611BEB12B46E81600FFF2BC /* RegistrationViewController.swift */,
+				3611BEB32B46E84600FFF2BC /* AuthorizationViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -129,6 +140,7 @@
 		3611BEA52B45A44700FFF2BC /* App */ = {
 			isa = PBXGroup;
 			children = (
+				3611BEB52B46E98900FFF2BC /* AppViewController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -270,7 +282,11 @@
 			files = (
 				3611BEAE2B45B37A00FFF2BC /* Model.swift in Sources */,
 				3611BEAB2B45A79200FFF2BC /* SlideCollectionViewCell.swift in Sources */,
+				3611BEB02B46E68200FFF2BC /* SliderSlides.swift in Sources */,
 				3611BEA72B45A46F00FFF2BC /* LoginViewController.swift in Sources */,
+				3611BEB42B46E84600FFF2BC /* AuthorizationViewController.swift in Sources */,
+				3611BEB22B46E81600FFF2BC /* RegistrationViewController.swift in Sources */,
+				3611BEB62B46E98900FFF2BC /* AppViewController.swift in Sources */,
 				3611BE8C2B459F6100FFF2BC /* AppDelegate.swift in Sources */,
 				3611BE8E2B459F6100FFF2BC /* SceneDelegate.swift in Sources */,
 			);
