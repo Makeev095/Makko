@@ -12,7 +12,6 @@
 		3611BE932B459F6100FFF2BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3611BE912B459F6100FFF2BC /* Main.storyboard */; };
 		3611BE952B459F6200FFF2BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3611BE942B459F6200FFF2BC /* Assets.xcassets */; };
 		3611BE982B459F6200FFF2BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3611BE962B459F6200FFF2BC /* LaunchScreen.storyboard */; };
-		3611BEA02B45A0DC00FFF2BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3611BE9F2B45A0DC00FFF2BC /* GoogleService-Info.plist */; };
 		3611BEA72B45A46F00FFF2BC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611BEA62B45A46F00FFF2BC /* LoginViewController.swift */; };
 		3611BEAB2B45A79200FFF2BC /* SlideCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611BEA92B45A79200FFF2BC /* SlideCollectionViewCell.swift */; };
 		3611BEAC2B45A79200FFF2BC /* SlideCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3611BEAA2B45A79200FFF2BC /* SlideCollectionViewCell.xib */; };
@@ -23,6 +22,8 @@
 		3611BEB62B46E98900FFF2BC /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611BEB52B46E98900FFF2BC /* AppViewController.swift */; };
 		3611BEB82B485C6C00FFF2BC /* CheckField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611BEB72B485C6C00FFF2BC /* CheckField.swift */; };
 		3611BEBA2B4861D600FFF2BC /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611BEB92B4861D600FFF2BC /* Service.swift */; };
+		36AE25972B4AA491000E6BDB /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AE25962B4AA491000E6BDB /* FirebaseAuth.framework */; };
+		36D9B7752B4AB06000CD138C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3611BE9F2B45A0DC00FFF2BC /* GoogleService-Info.plist */; };
 		C61C1AF92D3DFF9BBBD6C07F /* Pods_Makko.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143AF755982E9EDFBD72293C /* Pods_Makko.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,8 @@
 		3611BEB52B46E98900FFF2BC /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		3611BEB72B485C6C00FFF2BC /* CheckField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckField.swift; sourceTree = "<group>"; };
 		3611BEB92B4861D600FFF2BC /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		365A05CB2B4AA8CA00B0B6F0 /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36AE25962B4AA491000E6BDB /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A157CCCBB93D826348DBC9DF /* Pods-Makko.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makko.debug.xcconfig"; path = "Target Support Files/Pods-Makko/Pods-Makko.debug.xcconfig"; sourceTree = "<group>"; };
 		EFE0F0EAE92F9D1A6FAB3F44 /* Pods-Makko.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makko.release.xcconfig"; path = "Target Support Files/Pods-Makko/Pods-Makko.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36AE25972B4AA491000E6BDB /* FirebaseAuth.framework in Frameworks */,
 				C61C1AF92D3DFF9BBBD6C07F /* Pods_Makko.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +69,8 @@
 		0E945F3B358E1A0DDD691225 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				365A05CB2B4AA8CA00B0B6F0 /* FirebaseFirestore.framework */,
+				36AE25962B4AA491000E6BDB /* FirebaseAuth.framework */,
 				143AF755982E9EDFBD72293C /* Pods_Makko.framework */,
 			);
 			name = Frameworks;
@@ -187,6 +193,8 @@
 			dependencies = (
 			);
 			name = Makko;
+			packageProductDependencies = (
+			);
 			productName = Makko;
 			productReference = 3611BE882B459F6100FFF2BC /* Makko.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +223,8 @@
 				Base,
 			);
 			mainGroup = 3611BE7F2B459F6100FFF2BC;
+			packageReferences = (
+			);
 			productRefGroup = 3611BE892B459F6100FFF2BC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -229,9 +239,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36D9B7752B4AB06000CD138C /* GoogleService-Info.plist in Resources */,
 				3611BE982B459F6200FFF2BC /* LaunchScreen.storyboard in Resources */,
 				3611BEAC2B45A79200FFF2BC /* SlideCollectionViewCell.xib in Resources */,
-				3611BEA02B45A0DC00FFF2BC /* GoogleService-Info.plist in Resources */,
 				3611BE952B459F6200FFF2BC /* Assets.xcassets in Resources */,
 				3611BE932B459F6100FFF2BC /* Main.storyboard in Resources */,
 			);
@@ -358,6 +368,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -418,6 +429,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTING_SEARCH_PATHS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -450,13 +462,13 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = Makeev095.Makko;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -479,13 +491,13 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = Makeev095.Makko;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
