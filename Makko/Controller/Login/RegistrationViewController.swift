@@ -56,8 +56,15 @@ class RegistrationViewController: UIViewController {
                     print("Произошла ошибка регистрации")
                         
                 case 1:
-                    print("Успешно зарегистрировались")
                     self?.service.confirmEmail()
+                        
+                        let alert = UIAlertController(title: "Вы успешно зарегистрировались", message: "Пожалуйста подтвердите свой аккаунт через письмо, отправленное на вашу почту", preferredStyle: .alert)
+                        
+                        let okButton = UIAlertAction(title: "Хорошо", style: .default) { _ in
+                            self?.delegate.closeVC()
+                        }
+                        alert.addAction(okButton)
+                        self?.present(alert, animated: true)
                         
                 default:
                     print("Неизвестная ошибка")

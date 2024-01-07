@@ -39,4 +39,26 @@ class Service {
             }
         })
     }
+    
+    func authorizationInApp(_ data: LoginField, completion: @escaping (AuthorizationResponse) -> ()) {
+        Auth.auth().signIn(withEmail: data.email, password: data.password) { result, error in
+            if error != nil {
+                completion(.error)
+            } else {
+                if let result = result {
+                    if result.user.isEmailVerified {
+                        completion(.success)
+                    } else {
+                        self.confirmEmail()
+                        completion(.noVerified)
+                    }
+                }
+            }
+        }
+    }
+    
+    func getUserStatus() {
+        // is isset
+        // auth
+    }
 }

@@ -300,7 +300,7 @@
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5nA-Hd-fqL">
                                                         <rect key="frame" x="0.0" y="0.0" width="333" height="43"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nVZ-1P-hpz">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" restorationIdentifier="email" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nVZ-1P-hpz">
                                                                 <rect key="frame" x="10" y="3" width="313" height="37"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
@@ -324,10 +324,10 @@
                                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOd-HK-Ape">
                                                         <rect key="frame" x="0.0" y="57" width="333" height="43"/>
                                                         <subviews>
-                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Dk-Zu-shM">
+                                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" restorationIdentifier="password" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Dk-Zu-shM">
                                                                 <rect key="frame" x="10" y="3" width="313" height="37"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -351,11 +351,17 @@
                                                 <rect key="frame" x="0.0" y="160.33333333333331" width="333" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Забыли пароль?"/>
+                                                <connections>
+                                                    <action selector="forgorPasswordButtonClick:" destination="68H-1I-eE9" eventType="touchUpInside" id="UiP-aR-bQK"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vpp-Ch-MtO">
                                                 <rect key="frame" x="0.0" y="214.66666666666663" width="333" height="34.333333333333343"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Нет аккаунта?"/>
+                                                <connections>
+                                                    <action selector="noAccountButtonClick:" destination="68H-1I-eE9" eventType="touchUpInside" id="LN1-tv-BAH"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHd-br-ufb">
                                                 <rect key="frame" x="0.0" y="268.99999999999994" width="333" height="50"/>
@@ -371,6 +377,9 @@
                                                         <integer key="value" value="25"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="AuthorizationButtonClick:" destination="68H-1I-eE9" eventType="touchUpInside" id="1Qu-oK-YGq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -408,6 +417,13 @@
                             <constraint firstItem="3yD-TC-EwL" firstAttribute="trailing" secondItem="ab6-1J-zef" secondAttribute="trailing" id="mTL-PW-S5a"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="nVZ-1P-hpz" id="ZSE-Ug-mIt"/>
+                        <outlet property="emailView" destination="5nA-Hd-fqL" id="IND-N1-uGG"/>
+                        <outlet property="mainView" destination="3yD-TC-EwL" id="Yuq-Nl-kL6"/>
+                        <outlet property="passwordField" destination="6Dk-Zu-shM" id="k0k-MW-y95"/>
+                        <outlet property="passwordView" destination="GOd-HK-Ape" id="XTw-Ku-ES7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZ9-CF-Urk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
