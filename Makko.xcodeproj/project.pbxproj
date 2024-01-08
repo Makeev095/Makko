@@ -24,6 +24,9 @@
 		3611BEBA2B4861D600FFF2BC /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3611BEB92B4861D600FFF2BC /* Service.swift */; };
 		36AE25972B4AA491000E6BDB /* FirebaseAuth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36AE25962B4AA491000E6BDB /* FirebaseAuth.framework */; };
 		36D9B7752B4AB06000CD138C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3611BE9F2B45A0DC00FFF2BC /* GoogleService-Info.plist */; };
+		36D9B7792B4C412100CD138C /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9B7782B4C412100CD138C /* UsersViewController.swift */; };
+		36D9B77D2B4C41D500CD138C /* UserCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9B77B2B4C41D500CD138C /* UserCellTableViewCell.swift */; };
+		36D9B77E2B4C41D500CD138C /* UserCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D9B77C2B4C41D500CD138C /* UserCellTableViewCell.xib */; };
 		C61C1AF92D3DFF9BBBD6C07F /* Pods_Makko.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143AF755982E9EDFBD72293C /* Pods_Makko.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +52,9 @@
 		3611BEB92B4861D600FFF2BC /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		365A05CB2B4AA8CA00B0B6F0 /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36AE25962B4AA491000E6BDB /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36D9B7782B4C412100CD138C /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		36D9B77B2B4C41D500CD138C /* UserCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellTableViewCell.swift; sourceTree = "<group>"; };
+		36D9B77C2B4C41D500CD138C /* UserCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCellTableViewCell.xib; sourceTree = "<group>"; };
 		A157CCCBB93D826348DBC9DF /* Pods-Makko.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makko.debug.xcconfig"; path = "Target Support Files/Pods-Makko/Pods-Makko.debug.xcconfig"; sourceTree = "<group>"; };
 		EFE0F0EAE92F9D1A6FAB3F44 /* Pods-Makko.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makko.release.xcconfig"; path = "Target Support Files/Pods-Makko/Pods-Makko.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +131,7 @@
 		3611BEA22B45A38800FFF2BC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				36D9B77A2B4C419700CD138C /* Users */,
 				3611BEA82B45A74A00FFF2BC /* Slide */,
 			);
 			path = View;
@@ -152,6 +159,8 @@
 		3611BEA52B45A44700FFF2BC /* App */ = {
 			isa = PBXGroup;
 			children = (
+				36D9B7772B4C40AD00CD138C /* Messenger */,
+				36D9B7762B4C407E00CD138C /* Users */,
 				3611BEB52B46E98900FFF2BC /* AppViewController.swift */,
 			);
 			path = App;
@@ -164,6 +173,30 @@
 				3611BEAA2B45A79200FFF2BC /* SlideCollectionViewCell.xib */,
 			);
 			path = Slide;
+			sourceTree = "<group>";
+		};
+		36D9B7762B4C407E00CD138C /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				36D9B7782B4C412100CD138C /* UsersViewController.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
+		36D9B7772B4C40AD00CD138C /* Messenger */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Messenger;
+			sourceTree = "<group>";
+		};
+		36D9B77A2B4C419700CD138C /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				36D9B77B2B4C41D500CD138C /* UserCellTableViewCell.swift */,
+				36D9B77C2B4C41D500CD138C /* UserCellTableViewCell.xib */,
+			);
+			path = Users;
 			sourceTree = "<group>";
 		};
 		AD337F3FEEFDED4049A8F427 /* Pods */ = {
@@ -239,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36D9B77E2B4C41D500CD138C /* UserCellTableViewCell.xib in Resources */,
 				36D9B7752B4AB06000CD138C /* GoogleService-Info.plist in Resources */,
 				3611BE982B459F6200FFF2BC /* LaunchScreen.storyboard in Resources */,
 				3611BEAC2B45A79200FFF2BC /* SlideCollectionViewCell.xib in Resources */,
@@ -297,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3611BEAE2B45B37A00FFF2BC /* Model.swift in Sources */,
+				36D9B7792B4C412100CD138C /* UsersViewController.swift in Sources */,
 				3611BEAB2B45A79200FFF2BC /* SlideCollectionViewCell.swift in Sources */,
 				3611BEB02B46E68200FFF2BC /* SliderSlides.swift in Sources */,
 				3611BEB82B485C6C00FFF2BC /* CheckField.swift in Sources */,
@@ -307,6 +342,7 @@
 				3611BEBA2B4861D600FFF2BC /* Service.swift in Sources */,
 				3611BE8C2B459F6100FFF2BC /* AppDelegate.swift in Sources */,
 				3611BE8E2B459F6100FFF2BC /* SceneDelegate.swift in Sources */,
+				36D9B77D2B4C41D500CD138C /* UserCellTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

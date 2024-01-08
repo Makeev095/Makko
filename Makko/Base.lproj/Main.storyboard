@@ -42,32 +42,38 @@
             </objects>
             <point key="canvasLocation" x="21" y="1129"/>
         </scene>
-        <!--Item-->
+        <!--Пользователи-->
         <scene sceneID="RZa-Lh-LGo">
             <objects>
-                <viewController id="doC-dg-nsj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UsersViewController" id="doC-dg-nsj" customClass="UsersViewController" customModule="Makko" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ez3-pd-ZwP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Авторизован" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f0C-Gs-iyy">
-                                <rect key="frame" x="145" y="384" width="103" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ANy-4e-nwy">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="217-lY-woo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ANy-4e-nwy" firstAttribute="top" secondItem="217-lY-woo" secondAttribute="top" id="FMy-FI-fY1"/>
+                            <constraint firstItem="217-lY-woo" firstAttribute="trailing" secondItem="ANy-4e-nwy" secondAttribute="trailing" id="m9c-Ns-5Hz"/>
+                            <constraint firstItem="ANy-4e-nwy" firstAttribute="leading" secondItem="217-lY-woo" secondAttribute="leading" id="u85-By-2NQ"/>
+                            <constraint firstItem="217-lY-woo" firstAttribute="bottom" secondItem="ANy-4e-nwy" secondAttribute="bottom" id="zrx-eC-gKG"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="wqe-7q-tGx"/>
+                    <tabBarItem key="tabBarItem" title="Пользователи" image="person.2" catalog="system" selectedImage="person.2.fill" id="wqe-7q-tGx"/>
+                    <connections>
+                        <outlet property="tableView" destination="ANy-4e-nwy" id="cla-3F-m2Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k0Q-0U-0zK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="926" y="1129"/>
         </scene>
-        <!--Item-->
+        <!--Чаты-->
         <scene sceneID="hag-f4-veh">
             <objects>
                 <viewController id="Ypz-iV-T9e" sceneMemberID="viewController">
@@ -86,7 +92,7 @@
                         <viewLayoutGuide key="safeArea" id="f7f-9s-UpZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="0oo-yR-mFW"/>
+                    <tabBarItem key="tabBarItem" title="Чаты" image="message" catalog="system" selectedImage="message.fill" id="0oo-yR-mFW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWk-EX-emO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -431,6 +437,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="message" catalog="system" width="128" height="116"/>
+        <image name="message.fill" catalog="system" width="128" height="114"/>
+        <image name="person.2" catalog="system" width="128" height="82"/>
+        <image name="person.2.fill" catalog="system" width="128" height="81"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -61,4 +61,20 @@ class Service {
         // is isset
         // auth
     }
+    
+    func getAllUsers(completion: @escaping ([String]) -> ()) {
+        Firestore.firestore().collection("users").getDocuments {snap, error in
+            if error == nil {
+                var emailList = [String]()
+                if let docs = snap?.documents {
+                    for document in docs {
+                        let data = document.data()
+                        let email = data["email"] as! String
+                        emailList.append(email)
+                    }
+                }
+                completion(emailList)
+            }
+        }
+    }
 }
