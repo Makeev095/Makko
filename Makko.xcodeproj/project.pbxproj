@@ -27,6 +27,8 @@
 		36D9B7792B4C412100CD138C /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9B7782B4C412100CD138C /* UsersViewController.swift */; };
 		36D9B77D2B4C41D500CD138C /* UserCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9B77B2B4C41D500CD138C /* UserCellTableViewCell.swift */; };
 		36D9B77E2B4C41D500CD138C /* UserCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36D9B77C2B4C41D500CD138C /* UserCellTableViewCell.xib */; };
+		36D9B7812B4C604C00CD138C /* MessageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9B7802B4C604C00CD138C /* MessageListViewController.swift */; };
+		36D9B7832B4C63F700CD138C /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36D9B7822B4C63F700CD138C /* ChatViewController.swift */; };
 		C61C1AF92D3DFF9BBBD6C07F /* Pods_Makko.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 143AF755982E9EDFBD72293C /* Pods_Makko.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,8 @@
 		36D9B7782B4C412100CD138C /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
 		36D9B77B2B4C41D500CD138C /* UserCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellTableViewCell.swift; sourceTree = "<group>"; };
 		36D9B77C2B4C41D500CD138C /* UserCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCellTableViewCell.xib; sourceTree = "<group>"; };
+		36D9B7802B4C604C00CD138C /* MessageListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewController.swift; sourceTree = "<group>"; };
+		36D9B7822B4C63F700CD138C /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		A157CCCBB93D826348DBC9DF /* Pods-Makko.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makko.debug.xcconfig"; path = "Target Support Files/Pods-Makko/Pods-Makko.debug.xcconfig"; sourceTree = "<group>"; };
 		EFE0F0EAE92F9D1A6FAB3F44 /* Pods-Makko.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Makko.release.xcconfig"; path = "Target Support Files/Pods-Makko/Pods-Makko.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +135,7 @@
 		3611BEA22B45A38800FFF2BC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				36D9B77F2B4C600D00CD138C /* Chat */,
 				36D9B77A2B4C419700CD138C /* Users */,
 				3611BEA82B45A74A00FFF2BC /* Slide */,
 			);
@@ -197,6 +202,15 @@
 				36D9B77C2B4C41D500CD138C /* UserCellTableViewCell.xib */,
 			);
 			path = Users;
+			sourceTree = "<group>";
+		};
+		36D9B77F2B4C600D00CD138C /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				36D9B7802B4C604C00CD138C /* MessageListViewController.swift */,
+				36D9B7822B4C63F700CD138C /* ChatViewController.swift */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		AD337F3FEEFDED4049A8F427 /* Pods */ = {
@@ -330,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				36D9B7812B4C604C00CD138C /* MessageListViewController.swift in Sources */,
 				3611BEAE2B45B37A00FFF2BC /* Model.swift in Sources */,
 				36D9B7792B4C412100CD138C /* UsersViewController.swift in Sources */,
 				3611BEAB2B45A79200FFF2BC /* SlideCollectionViewCell.swift in Sources */,
@@ -342,6 +357,7 @@
 				3611BEBA2B4861D600FFF2BC /* Service.swift in Sources */,
 				3611BE8C2B459F6100FFF2BC /* AppDelegate.swift in Sources */,
 				3611BE8E2B459F6100FFF2BC /* SceneDelegate.swift in Sources */,
+				36D9B7832B4C63F700CD138C /* ChatViewController.swift in Sources */,
 				36D9B77D2B4C41D500CD138C /* UserCellTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

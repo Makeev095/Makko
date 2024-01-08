@@ -77,4 +77,42 @@ class Service {
             }
         }
     }
+    
+    //MARK: -- Messanger
+    
+    func sendMessage(otherId: String?, conversationId: String?, message: Message, text: String, completion: @escaping (Bool) -> ()) {
+        if conversationId == nil {
+            //
+        } else {
+            let message: [String: Any] = [
+                "date": Date(),
+                "sender": message.sender.senderId,
+                "text": text
+            ]
+            
+            Firestore.firestore().collection("conversations").document(conversationId!).collection("messages").addDocument(data: message) { error in
+                if error == nil {
+                    completion(true)
+                } else {
+                    completion(false)
+                }
+            }
+        }
+    }
+    
+    func updateConversation() {
+        
+    }
+    
+    func getConversationId() {
+        
+    }
+    
+    func getAllMessages() {
+        
+    }
+    
+    func getOneMessage() {
+        
+    }
 }

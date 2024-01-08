@@ -8,6 +8,7 @@ target 'Makko' do
 pod 'Firebase/Auth'
 pod 'Firebase/Core'
 pod 'Firebase/Firestore'
+pod 'MessageKit'
 
   # Pods for Makko
 end

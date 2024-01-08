@@ -14,6 +14,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
+        // userDefaults.set(false, forKey: "isLogin")
+        // Для перехода в режим авторизованного и не авторизованного пользователя
+        
         let isLogin = userDefaults.object(forKey: "isLogin") as? Bool ?? false
         
         if isLogin {

@@ -35,7 +35,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="doC-dg-nsj" kind="relationship" relationship="viewControllers" id="xja-6e-LDd"/>
-                        <segue destination="Ypz-iV-T9e" kind="relationship" relationship="viewControllers" id="ARN-ZN-hIQ"/>
+                        <segue destination="eq7-xc-wXd" kind="relationship" relationship="viewControllers" id="ARN-ZN-hIQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x9Z-nb-NzG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -76,27 +76,33 @@
         <!--Чаты-->
         <scene sceneID="hag-f4-veh">
             <objects>
-                <viewController id="Ypz-iV-T9e" sceneMemberID="viewController">
+                <viewController id="Ypz-iV-T9e" customClass="MessageListViewController" customModule="Makko" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FWK-eb-f9Y">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfn-yq-qav">
-                                <rect key="frame" x="175" y="448" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="gte-9P-76V">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="f7f-9s-UpZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="f7f-9s-UpZ" firstAttribute="bottom" secondItem="gte-9P-76V" secondAttribute="bottom" id="Ivd-75-V0z"/>
+                            <constraint firstItem="gte-9P-76V" firstAttribute="top" secondItem="f7f-9s-UpZ" secondAttribute="top" id="UwY-mW-3eI"/>
+                            <constraint firstItem="f7f-9s-UpZ" firstAttribute="trailing" secondItem="gte-9P-76V" secondAttribute="trailing" id="pQb-hl-93j"/>
+                            <constraint firstItem="gte-9P-76V" firstAttribute="leading" secondItem="f7f-9s-UpZ" secondAttribute="leading" id="yOO-HO-eub"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Чаты" image="message" catalog="system" selectedImage="message.fill" id="0oo-yR-mFW"/>
+                    <navigationItem key="navigationItem" title="Чаты" id="L8Q-dZ-X0v"/>
+                    <connections>
+                        <outlet property="tableView" destination="gte-9P-76V" id="UpG-8B-n8a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWk-EX-emO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="926" y="1863"/>
+            <point key="canvasLocation" x="1852.6717557251907" y="1862.6760563380283"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="0wj-5G-5cr">
@@ -434,6 +440,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZ9-CF-Urk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3007" y="4"/>
+        </scene>
+        <!--Чаты-->
+        <scene sceneID="JUd-yN-a9q">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eq7-xc-wXd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Чаты" image="message" catalog="system" selectedImage="message.fill" id="0oo-yR-mFW"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qHI-ZM-Usb">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ypz-iV-T9e" kind="relationship" relationship="rootViewController" id="8Xv-6q-nZk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gcr-di-PhI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="925.95419847328242" y="1862.6760563380283"/>
         </scene>
     </scenes>
     <resources>
