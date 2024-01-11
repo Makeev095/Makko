@@ -13,7 +13,7 @@ class UsersViewController: UIViewController {
     
     let service = Service.shared
     
-    var users = [String]()
+    var users = [CurrentUser]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,23 +37,30 @@ class UsersViewController: UIViewController {
 }
 
 extension  UsersViewController: UITableViewDelegate, UITableViewDataSource {
-        
-        
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return users.count
-        }
-        
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: UserCellTableViewCell.reuseId, for: indexPath) as! UserCellTableViewCell
-            
-            let cellName = users[indexPath.row]
-            cell.configCell(cellName)
-            cell.selectionStyle = .none
-            
-            return cell
-        }
-        
-        func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 100
-        }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return users.count
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: UserCellTableViewCell.reuseId, for: indexPath) as! UserCellTableViewCell
+        
+        let cellName = users[indexPath.row]
+        cell.configCell(cellName.email)
+        cell.selectionStyle = .none
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let userId = users[indexPath.row].id
+        let vc = ChatViewController()
+        vc.otherId = userId
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+}

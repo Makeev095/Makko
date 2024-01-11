@@ -8,7 +8,7 @@
 import UIKit
 
 class SlideCollectionViewCell: UICollectionViewCell {
-
+    
     @IBOutlet weak var descriptionText: UILabel!
     @IBOutlet weak var slideImage: UIImageView!
     
@@ -22,7 +22,7 @@ class SlideCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     func configure(slide: Slides) {
         slideImage.image = slide.img
         descriptionText.text = slide.text

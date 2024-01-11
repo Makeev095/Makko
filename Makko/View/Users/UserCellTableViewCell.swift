@@ -8,7 +8,7 @@
 import UIKit
 
 class UserCellTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var userName: UILabel!
     @IBOutlet weak var userImage: UIImageView!
@@ -20,7 +20,7 @@ class UserCellTableViewCell: UITableViewCell {
         
         settingCell()
     }
-
+    
     func configCell(_ name: String) {
         userName.text = name
     }
@@ -32,7 +32,7 @@ class UserCellTableViewCell: UITableViewCell {
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     

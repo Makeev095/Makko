@@ -135,7 +135,6 @@
 		3611BEA22B45A38800FFF2BC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				36D9B77F2B4C600D00CD138C /* Chat */,
 				36D9B77A2B4C419700CD138C /* Users */,
 				3611BEA82B45A74A00FFF2BC /* Slide */,
 			);
@@ -191,6 +190,8 @@
 		36D9B7772B4C40AD00CD138C /* Messenger */ = {
 			isa = PBXGroup;
 			children = (
+				36D9B7802B4C604C00CD138C /* MessageListViewController.swift */,
+				36D9B7822B4C63F700CD138C /* ChatViewController.swift */,
 			);
 			path = Messenger;
 			sourceTree = "<group>";
@@ -202,15 +203,6 @@
 				36D9B77C2B4C41D500CD138C /* UserCellTableViewCell.xib */,
 			);
 			path = Users;
-			sourceTree = "<group>";
-		};
-		36D9B77F2B4C600D00CD138C /* Chat */ = {
-			isa = PBXGroup;
-			children = (
-				36D9B7802B4C604C00CD138C /* MessageListViewController.swift */,
-				36D9B7822B4C63F700CD138C /* ChatViewController.swift */,
-			);
-			path = Chat;
 			sourceTree = "<group>";
 		};
 		AD337F3FEEFDED4049A8F427 /* Pods */ = {

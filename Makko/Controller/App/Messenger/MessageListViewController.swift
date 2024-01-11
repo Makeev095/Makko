@@ -9,7 +9,7 @@ import UIKit
 import MessageKit
 
 class MessageListViewController: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {

@@ -9,7 +9,7 @@ import UIKit
 
 
 class AuthorizationViewController: UIViewController {
-
+    
     @IBOutlet weak var emailView: UIView!
     @IBOutlet weak var emailField: UITextField!
     
@@ -28,12 +28,12 @@ class AuthorizationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tapGest = UITapGestureRecognizer(target: self, action: #selector(endEditing))
         
         mainView.addGestureRecognizer(tapGest!)
     }
-
+    
     @objc func endEditing() {
         self.view.endEditing(true)
     }
@@ -90,5 +90,5 @@ class AuthorizationViewController: UIViewController {
     @IBAction func closeVC(_ sender: Any) {
         delegate.closeVC()
     }
-
+    
 }

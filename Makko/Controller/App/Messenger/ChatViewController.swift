@@ -22,23 +22,19 @@ struct Message: MessageType {
 }
 
 class ChatViewController: MessagesViewController {
-
+    
     var chatId: String?
     var otherId: String?
     
     let service = Service.shared
     
-    let selfSender = Sender(senderId: "1", displayName: "Me")
-    let otherSender = Sender(senderId: "2", displayName: "Jony")
+    let selfSender = Sender(senderId: "1", displayName: "")
+    let otherSender = Sender(senderId: "2", displayName: "")
     
     var messages = [Message]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        messages.append(Message(sender: selfSender, messageId: "1", sentDate: Date().addingTimeInterval(-11200), kind: .text("Привет")))
-        
-        messages.append(Message(sender: otherSender, messageId: "2", sentDate: Date().addingTimeInterval(-10200), kind: .text("Привет")))
         
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
@@ -47,6 +43,22 @@ class ChatViewController: MessagesViewController {
         messageInputBar.delegate = self
         
         showMessageTimestampOnSwipeLeft = true
+        
+        
+        
+        if chatId == nil {
+            service.getConversationId(otherId: otherId!) { [weak self] chatId in
+                self?.chatId = chatId
+                self?.getMessages(conversationId: chatId)
+            }
+        }
+    }
+    
+    func getMessages(conversationId: String) {
+        service.getAllMessages(chatId: conversationId) { [weak self] messages in
+            self?.messages = messages
+            self?.messagesCollectionView.reloadDataAndKeepOffset()
+        }
     }
 }
 
@@ -69,14 +81,15 @@ extension ChatViewController: InputBarAccessoryViewDelegate {
     
     func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
         
-        let message = Message(sender: selfSender, messageId: "2132", sentDate: Date(), kind: .text(text))
+        let message = Message(sender: selfSender, messageId: "", sentDate: Date(), kind: .text(text))
         messages.append(message)
         
-        service.sendMessage(otherId: self.otherId, conversationId: self.chatId, message: message, text: text) { [weak self] isSend in
+        service.sendMessage(otherId: self.otherId, conversationId: self.chatId, text: text) { [weak self] conversationId in
             DispatchQueue.main.async {
                 inputBar.inputTextView.text = nil
                 self?.messagesCollectionView.reloadDataAndKeepOffset()
             }
+            self?.chatId = conversationId
         }
     }
 }

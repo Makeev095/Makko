@@ -52,11 +52,11 @@ class RegistrationViewController: UIViewController {
             if passwordField.text == rePasswordField.text {
                 service.createNewUser(LoginField(email: emailField.text!, password: passwordField.text!)) { [weak self] code in
                     switch code.code {
-                case 0:
-                    print("Произошла ошибка регистрации")
+                    case 0:
+                        print("Произошла ошибка регистрации")
                         
-                case 1:
-                    self?.service.confirmEmail()
+                    case 1:
+                        self?.service.confirmEmail()
                         
                         let alert = UIAlertController(title: "Вы успешно зарегистрировались", message: "Пожалуйста подтвердите свой аккаунт через письмо, отправленное на вашу почту", preferredStyle: .alert)
                         
@@ -66,8 +66,8 @@ class RegistrationViewController: UIViewController {
                         alert.addAction(okButton)
                         self?.present(alert, animated: true)
                         
-                default:
-                    print("Неизвестная ошибка")
+                    default:
+                        print("Неизвестная ошибка")
                     }
                 }
             } else {
